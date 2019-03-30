@@ -1,0 +1,58 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module goalExtract.
+ */]
+[module goalExtract('http://www.xtext.org/example/mydsl/MyDsl')]
+[import org::eclipse::acceleo::mydsl2text::main::services::ProcessGoalmtl]
+
+[**
+ * The documentation of the template generateElement.
+ * @param aModel
+ */]
+[template public generateElement(m : Model)]
+[comment @main/]
+[file ('goal.txt', false, 'UTF-8')]
+[delete_files()/]
+[for (a:Actor | m.eAllContents(Actor))]
+	Actor : [a.name/]
+	[count_Actor(a.name)/]
+	[setFSM_name(a.name)/]
+	[for(g:Goal | a.eAllContents(Goal))]
+		Goal : [g.name/]
+		[goalProcess(g.name,g.decompositionType.value,'root')/]
+
+		
+		DecompositionType: [g.decompositionType/]	
+		
+		[for(c:InLineDecomposition | g.eAllContents(InLineDecomposition))]
+			[for(d:DecompositionEnd | c.eAllContents(DecompositionEnd))]
+				child: [d.destName.name/]
+				[goalProcess(d.destName.name,'none','child')/]
+	
+			[/for]	
+		[/for]
+		
+		
+	[/for]
+
+	[for(n:NormalCTL | a.eAllContents(NormalCTL))]
+		[for(c:CTL | n.eAllContents(CTL))]
+			CTL:[c.variables.value/]
+			[check_CTL_global_or_existential(c.variables.value)/]
+		[/for]
+	[/for]
+[comment[call_generate()/]
+[for(n:NormalDependency | a.eAllContents(NormalDependency))]
+							[for(p:DependencyEnd | n.eAllContents(DependencyEnd))]
+								dependency:[n.src.name/] dependson [p.destName.name/]
+						[/for]
+					[/for]
+[/for]
+[comment[skeleton()/]]
+[/file]
+
+[/template]
+
+
+
+

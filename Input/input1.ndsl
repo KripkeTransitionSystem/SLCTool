@@ -1,0 +1,9 @@
+grl model{
+	actor BankLocker{
+		goal AccessLocker{decompositionType='and'; decomposedBy AccessGrant,AccessMade;}
+		goal AccessGrant{decompositionType='none';}
+		goal AccessMade{decompositionType='none';}	
+		CTL 'AG((AccessGrant=FU) -> AX(AccessMade=FU))'	
+		}
+		
+}

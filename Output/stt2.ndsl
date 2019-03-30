@@ -1,0 +1,11 @@
+fsm Doctor
+ProvideHealthcare=NC, ProvideHealthcare:NC->CNF ProvideHealthcare=CNF,ObtainSymptoms=NC,PrescribeMedicine=NC,
+ProvideHealthcare=CNF,ObtainSymptoms=FU,PrescribeMedicine=FU, ProvideHealthcare:CNF->FU  ProvideHealthcare=FU,
+ProvideHealthcare=CNF,ObtainSymptoms=NC,PrescribeMedicine=NC, ObtainSymptoms:NC->CNF ProvideHealthcare=CNF,ObtainSymptoms=CNF,PrescribeMedicine=NC,
+ProvideHealthcare=CNF,ObtainSymptoms=CNF,PrescribeMedicine=NC, ObtainSymptoms:CNF->FU next ProvideHealthcare=CNF,ObtainSymptoms=FU,PrescribeMedicine=NC,
+ProvideHealthcare=CNF,ObtainSymptoms=FU,PrescribeMedicine=NC, PrescribeMedicine:NC->CNF ProvideHealthcare=CNF,PrescribeMedicine=CNF,ObtainSymptoms=FU,
+ProvideHealthcare=CNF,PrescribeMedicine=CNF,ObtainSymptoms=FU, PrescribeMedicine:CNF->FU next ProvideHealthcare=CNF,PrescribeMedicine=FU,ObtainSymptoms=FU,
+ProvideHealthcare=CNF,ObtainSymptoms=CNF,PrescribeMedicine=NC, PrescribeMedicine:NC->CNF ProvideHealthcare=CNF,PrescribeMedicine=CNF,ObtainSymptoms=CNF,
+ProvideHealthcare=CNF,PrescribeMedicine=CNF,ObtainSymptoms=CNF, ObtainSymptoms:CNF->FU next ProvideHealthcare=CNF,ObtainSymptoms=FU,PrescribeMedicine=CNF,
+ProvideHealthcare=CNF,ObtainSymptoms=NC,PrescribeMedicine=NC, PrescribeMedicine:NC->CNF ProvideHealthcare=CNF,PrescribeMedicine=CNF,ObtainSymptoms=NC,
+ProvideHealthcare=CNF,PrescribeMedicine=CNF,ObtainSymptoms=NC, ObtainSymptoms:NC->CNF ProvideHealthcare=CNF,ObtainSymptoms=CNF,PrescribeMedicine=CNF,
