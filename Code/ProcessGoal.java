@@ -72,7 +72,7 @@ public class ProcessGoal {
 	static int ctlflag=0;
 	public static void delete_files()
 	{
-        File file = new File("c://Users/Mandira Roy/eclipse-workspace/novadsl1/stt.ndsl");
+        File file = new File("c://Users//eclipse-workspace/novadsl1/stt.ndsl");
         if(file.delete()){
            // System.out.println("Cleared1");
         }else {
@@ -82,14 +82,14 @@ public class ProcessGoal {
        int  flag=1;
         while(flag==1)
         {
-        	String name="C:\\Users\\Mandira Roy\\dsl\\VAR"+i+".txt";
+        	String name="C:\\Users\\dsl\\VAR"+i+".txt";
         	  file=new File(name);
         	  if(file.delete()){
                 //  System.out.println("Cleared2");
               }else flag=0;
         	  i++;
         }
-        file = new File("c://Users/Mandira Roy/eclipse-workspace/novadsl1/NUSMV_input.smv");
+        file = new File("c://Users//eclipse-workspace/novadsl1/NUSMV_input.smv");
         file.delete();
       
        
@@ -98,7 +98,7 @@ public class ProcessGoal {
 	{
 		//startTime = System.currentTimeMillis();
 		actcount++;
-		filename="C:\\Users\\Mandira Roy\\dsl\\VAR"+actcount+".txt";
+		filename="C:\\Users\\dsl\\VAR"+actcount+".txt";
 	//	System.out.println("The filename is"+filename);
 		//System.out.println("The actor is"+a);
 		//System.out.println("The count is"+actcount);
@@ -435,7 +435,7 @@ public class ProcessGoal {
 		String swrite=new String();
 		try {
 			//setting the append mode for the output file
-			fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/stt.ndsl",true));
+			fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/stt.ndsl",true));
 			//fstt.write("fsm");
 			//fstt.newLine();
 			//fstt.write("path present ");
@@ -597,7 +597,7 @@ public class ProcessGoal {
 		String swrite="";
 		int flag=0;
 		try {
-			fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/stt.ndsl",true));
+			fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/stt.ndsl",true));
 			
 			while((temp.val.compareTo(s))!=0)
 				temp=temp.next;
@@ -871,7 +871,7 @@ public class ProcessGoal {
 		
 		//Scanner fpermu=null;
 		try {
-			fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/stt.ndsl",true));
+			fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/stt.ndsl",true));
 			//fstt.write("path presentss");
 			k=100;
 			while((t.val.compareTo(s))!=0)
@@ -2195,7 +2195,7 @@ public class ProcessGoal {
 		char c;
 		String swrite;
 		try {
-			f1=new FileReader("c://Users/Mandira Roy/eclipse-workspace/novadsl1/stt.ndsl");
+			f1=new FileReader("c://Users//eclipse-workspace/novadsl1/stt.ndsl");
 			temp=new BufferedWriter(new FileWriter("temp.txt",true));
 			while((i=f1.read())!=-1) // Loop to read the entire input file
 			{
@@ -2773,7 +2773,7 @@ public class ProcessGoal {
 	{
 		BufferedWriter fstt=null;
 		try {
-			fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/stt.ndsl",true));
+			fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/stt.ndsl",true));
 			fstt.write("fsm ");
 			fstt.write(s);
 			fstt.newLine();
@@ -2801,7 +2801,7 @@ public class ProcessGoal {
 		System.out.println("hello skeleton");
 		System.out.println("The actor count is"+actcount);
 		try {
-			fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/NUSMV_input.smv",true));
+			fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/NUSMV_input.smv",true));
 			fstt.write("MODULE main VAR");
 			fstt.newLine();
 		
@@ -2810,8 +2810,8 @@ public class ProcessGoal {
 			while(j<=actcount)
 			{
 				
-				//fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/NUSMV_input.smv",true));
-				fname="C:\\Users\\Mandira Roy\\dsl\\VAR"+j+".txt";
+				//fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/NUSMV_input.smv",true));
+				fname="C:\\Users\\dsl\\VAR"+j+".txt";
 				f1=new FileReader(fname);
 				System.out.println(fname);
 				int i;
@@ -2848,8 +2848,8 @@ public class ProcessGoal {
 			while(j<=actcount)
 			{
 				
-				//fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/NUSMV_input.smv",true));
-				fname="C:\\Users\\Mandira Roy\\dsl\\VAR"+j+".txt";
+				//fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/NUSMV_input.smv",true));
+				fname="C:\\Users\\dsl\\VAR"+j+".txt";
 				f1=new FileReader(fname);
 				System.out.println(fname);
 				int i;
@@ -2884,8 +2884,8 @@ public class ProcessGoal {
 			while(j<=actcount)
 			{
 				
-				//fstt=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/NUSMV_input.smv",true));
-				fname="C:\\Users\\Mandira Roy\\dsl\\VAR"+j+".txt";
+				//fstt=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/NUSMV_input.smv",true));
+				fname="C:\\Users\\dsl\\VAR"+j+".txt";
 				f1=new FileReader(fname);
 				System.out.println(fname);
 				int i;
@@ -2950,7 +2950,7 @@ public class ProcessGoal {
 		String fname,fname2;
 		char c;
 		int iteration=0;
-		fname="C://Users/Mandira Roy/eclipse-workspace/novadsl1/stt.ndsl";
+		fname="C://Users//eclipse-workspace/novadsl1/stt.ndsl";
 		try {
 		fstt=new FileReader(fname);
 		int i;
@@ -2995,9 +2995,9 @@ public class ProcessGoal {
 			System.out.println("str4 is"+str4);
 			
 		
-		fname2="C://Users/Mandira Roy/eclipse-workspace/novadsl1/NUSMV_input.smv";
+		fname2="C://Users//eclipse-workspace/novadsl1/NUSMV_input.smv";
 		fsmv=new FileReader(fname2);
-		ftemp=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/Temp.smv",false));
+		ftemp=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/Temp.smv",false));
 		int flag=0;
 		while((i=fsmv.read())!=-1)
 		{
@@ -3120,9 +3120,9 @@ public class ProcessGoal {
 		}
 		fsmv.close();
 		ftemp.close();
-		fname2="C://Users/Mandira Roy/eclipse-workspace/novadsl1/Temp.smv";
+		fname2="C://Users//eclipse-workspace/novadsl1/Temp.smv";
 		fsmv=new FileReader(fname2);
-		ftemp=new BufferedWriter(new FileWriter("c://Users/Mandira Roy/eclipse-workspace/novadsl1/NUSMV_input.smv",false));
+		ftemp=new BufferedWriter(new FileWriter("c://Users//eclipse-workspace/novadsl1/NUSMV_input.smv",false));
 		while((i=fsmv.read())!=-1)
 		{
 			c=(char)i;
