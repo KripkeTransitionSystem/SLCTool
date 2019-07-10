@@ -1,9 +1,0 @@
-grl model{
-	actor Doctor{
-		goal ProvideHealthcare{decompositionType='and'; decomposedBy ObtainSymptoms,PrescribeMedicine;}
-		goal ObtainSymptoms{decompositionType='none';}
-		goal PrescribeMedicine{decompositionType='none';}	
-		CTL 'AG((ObtainSymptoms=FU) -> AF(PrescribeMedicine=FU))'	
-		}
-		
-}
