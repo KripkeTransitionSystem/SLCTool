@@ -1,9 +1,0 @@
-fsm BankLocker
-AccessLocker=NC, AccessLocker:NC->CNF AccessLocker=CNF,AccessGrant=NC,AccessMade=NC,
-AccessLocker=CNF,AccessGrant=FU,AccessMade=FU, AccessLocker:CNF->FU  AccessLocker=FU,
-AccessLocker=CNF,AccessGrant=NC,AccessMade=NC, AccessGrant:NC->CNF AccessLocker=CNF,AccessGrant=CNF,AccessMade=NC,
-AccessLocker=CNF,AccessMade=CNF,AccessGrant=FU, AccessMade:CNF->FU  AccessLocker=CNF,AccessMade=FU,AccessGrant=FU,
-AccessLocker=CNF,AccessGrant=CNF,AccessMade=NC, AccessMade:NC->CNF AccessLocker=CNF,AccessMade=CNF,AccessGrant=CNF,
-AccessLocker=CNF,AccessMade=CNF,AccessGrant=CNF, AccessGrant:CNF->FU  AccessLocker=CNF,AccessGrant=FU,AccessMade=CNF,
-AccessLocker=CNF,AccessGrant=NC,AccessMade=NC, AccessMade:NC->CNF AccessLocker=CNF,AccessMade=CNF,AccessGrant=NC,
-AccessLocker=CNF,AccessMade=CNF,AccessGrant=NC, AccessGrant:NC->CNF AccessLocker=CNF,AccessGrant=CNF,AccessMade=CNF,
